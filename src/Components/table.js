@@ -4,7 +4,9 @@ class Table extends React.Component{
     render(){
         const Value = this.props.Data ;
         const  Delete =this.props.delete
-        const Show_Value = Value.map(value => {
+       let compter= Value.length
+         
+        const Show_Value = compter ? ( Value.map(value => {
             
             return(
             <Fragment key={value.id}>
@@ -17,9 +19,13 @@ class Table extends React.Component{
                
             </Fragment>
             )
-        }
-            )
- 
+       
+        
+        })
+        ) : (
+           <h1>null</h1>
+        )
+
             return(
                 <div >
 
