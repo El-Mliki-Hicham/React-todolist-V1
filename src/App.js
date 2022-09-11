@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Table from "./Components/table";
+import "bootstrap/dist/css/bootstrap.min.css"
+class App extends React.Component{
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  state={
+    data:[
+      {id:1,Nom:"hicham",Age:21},
+      {id:2,Nom:'nada',Age:21}
+    ]
+  }
+  render(){
+    return (
+
+      <div>
+       
+        <Table Data={this.state.data} />
+      </div>
+    )
+  }
 }
+
 
 export default App;
