@@ -12,7 +12,10 @@ class App extends React.Component{
   }
 //Delete function 
   delete=(id)=>{
-    console.log(id)
+    let _data  = this.state.data;
+    let find_id = _data.findIndex(value=>value.id ===id)
+    _data.splice(find_id,1)
+    this.setState({data :_data})
   }
 
   render(){
