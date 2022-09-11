@@ -23,7 +23,7 @@ class Table extends React.Component{
         
         })
         ) : (
-           <h1>this is no items to show</h1>
+           <h1>there is no items to show</h1>
         )
 
             return(
