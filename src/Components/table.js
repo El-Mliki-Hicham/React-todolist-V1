@@ -3,6 +3,7 @@ import React ,{ Fragment } from "react";
 class Table extends React.Component{
     render(){
         const Value = this.props.Data ;
+        console.log(Value)
         const  Delete =this.props.delete
        let compter= Value.length
          

@@ -18,6 +18,13 @@ class App extends React.Component{
     _data.splice(find_id,1)
     this.setState({data :_data})
   }
+  addItems=(value)=>{
+    value.id = Math.random();
+    let _data = this.state.data;
+    _data.push(value);
+    this.setState({data:_data})
+    
+  }
 
   render(){
     return (
@@ -26,8 +33,8 @@ class App extends React.Component{
       {/* send Data and Delete function to Table class */}
         <Table Data={this.state.data} delete={this.delete} />
      
-        <Input />
-      </div>
+        <Input addItems={this.addItems} />
+      </div>  
     )
   }
 }
